@@ -13,3 +13,5 @@ jobs:
       - uses: laiyefei/jekyll-action@2.0.1
         env:
           JEKYLL_PAT: ${{ secrets.access_token }}
+        with:
+          target_branch: 'gh-pages'
