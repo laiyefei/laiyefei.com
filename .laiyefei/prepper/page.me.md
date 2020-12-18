@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/css/biz/go.buff.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/biz/archive.css" />
+
+<div>	
+	<section class="container">
+	<div class="content-wrap">
+		<div class="content csSecContent" >
+		  <div class="title csTitleContent" style=" border-bottom: 1px solid black;padding:10px;box-shadow: 0 1px 2px grey">
+			<h3 style="line-height: 1.3;font-weight: bold;">♐　成长历程</h3>
+		  </div>
+		<section id="cd-timeline" class="cd-container">
+			{% for post in site.posts  %}
+			    <div class="cd-timeline-block" id="{{ post.date | date: '%Y-%m-%d' }}">
+			        <div class="cd-timeline-img cd-picture">
+			            <img src="{{ site.assets_dir | append: '/img/icon-picture.svg' | prepend: site.imgrepo }}" alt="Picture">
+			        </div>
+			        <div class="cd-timeline-content">
+			            <a href="{{ post.url | prepend: site.baseurl }}"><h4>{{ post.title }}</h4></a>
+			            <span class="cd-date">{{ post.date | date: '%Y-%m-%d' }}</span>
+			        </div>
+			    </div>
+			{% endfor %}
+		</section>  
+		</div>
+	</div>
+	<aside class="sidebar">
+		<div class="fixed">
+			<div class="widget widget_hot">
+		    	<div>{% include self.html %}</div>
+		 	</div>  
+		</div>
+	</aside>
+
+</section>
+
+</div>

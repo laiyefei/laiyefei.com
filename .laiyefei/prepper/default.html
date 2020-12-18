@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% if page.title %}
+        {{ page.title }}
+        {% else %}
+        {{ site.title }}
+        {% endif %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="{{ page.title }}, {% for category in page.categories %}{{ category }},{% endfor %} {% for tag in page.tags %}{{ tag }},{% endfor %} {{ site.title }}" />
+    <meta name="description"
+        content="{{ page.title }}, {% for category in page.categories %}{{ category }},{% endfor %} {% for tag in page.tags %}{{ tag }},{% endfor %} {% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="theme-color" content="#1CA6CB" />
+    <link rel="shortcut icon" type="image/x-icon" media="screen" href="{{ site.assets_dir }}/img/base/leaf.png" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <!-- <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"  /> -->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.assets_dir }}/mix/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.assets_dir }}/css/resos/nprogress.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.assets_dir }}/css/biz/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.assets_dir }}/css/resos/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.assets_dir }}/img/base/leaf.png">
+
+    <script type="text/javascript" src="{{ site.assets_dir }}/js/base/jquery-2.1.4.min.js"></script>
+    <script src="{{ site.assets_dir }}/js/resos/nprogress.js"></script>
+    <script src="{{ site.assets_dir }}/js/base.extends/jquery.lazyload.min.js"></script>
+    <!--[if gte IE 9]>
+          <script src="{{ site.assets_dir }}/js/base/jquery-1.11.1.min.js" type="text/javascript"></script>
+          <script src="{{ site.assets_dir }}/js/plugins/html5shiv.min.js" type="text/javascript"></script>
+          <script src="{{ site.assets_dir }}/js/plugins/respond.min.js" type="text/javascript"></script>
+          <script src="{{ site.assets_dir }}/js/plugins/selectivizr-min.js" type="text/javascript"></script>
+        <![endif]-->
+    <!--[if lt IE 9]>
+          <script>window.location.href='/pages/upgrade-browser.html';</script>
+        <![endif]-->
+
+    <!-- baidu statics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7ad26b2fc09bd02a85ad472fd92d2649";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+
+        //function for show info in console
+        (function () {
+            var sherlock = {};
+            sherlock.info = {};
+            sherlock.info.msg = [];
+            sherlock.info.msgShow = [];
+            sherlock.info.msg.push('%c信　　仰：真相??');
+            sherlock.info.msg.push('%c座 右 铭：∮逻辑的旋律牵动现象，永远演奏者事实♪');
+            sherlock.info.msg.push('%c作　　者：leaf.fly');
+            sherlock.info.msg.push('%c描　　述：qq:852800491;微信:13599545977;');
+            sherlock.info.msg.push('%c邮　　箱：sherlock@bakerstreet.club');
+            sherlock.info.msg.push('%c相关链接：bakerstreet.club,sherlock.help,bakerstreet.top,gogoogle.top');
+            sherlock.info.msg.push('%c版 本 号：v1.0.0.20170708');
+            sherlock.info.msg.push('%c❉ ');
+            sherlock.info.msgShow.push('color:#7905C6');
+            sherlock.info.msgShow.push('color:#089898');
+            sherlock.info.msgShow.push('color:#030F05');
+            sherlock.info.msgShow.push('color:#C4810A');
+            sherlock.info.msgShow.push('color:#406239');
+            sherlock.info.msgShow.push('color:#898321');
+            sherlock.info.msgShow.push('color:#AA2E29');
+            sherlock.info.msgShow.push('font-size:16pt');
+            for (var i = 0; i < (sherlock.info.msg.length || 0); i++) {
+                console.log(sherlock.info.msg[i], (sherlock.info.msgShow[i] || 'color:red'));
+            }
+        })();
+
+    </script>
+
+    {% for script in page.scripts %}
+    <script type="text/javascript"
+        src="{{ site.assets_dir | append:'/js/' | append:script | prepend:site.baseurl | prepend: site.url  }}">
+        </script>
+    {%endfor%}
+    {% for css in page.csses %}
+    <link rel="stylesheet" type="text/css"
+        href="{{ site.assets_dir | append:'/css/' | append:css | prepend:site.baseurl | prepend: site.url  }}">
+    {%endfor%}
+
+</head>
+
+
+<body class="user-select">
+    {% include effects/water-filter.md %}
+    <header class="header">
+        <nav class="navbar navbar-default" id="navbar">
+            <div class="container">
+                <div class="header-topbar hidden-xs link-border">
+                    <ul class="site-nav topmenu">
+                        <li>
+                            <a href="{{ site.url }}/feed.xml" title="RSS订阅">
+                                <i class="fa fa-rss">
+                                </i> RSS订阅
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="txtwav flip"
+                        style="padding-top: 5px;position: relative;top:5px;letter-spacing: 9px;color:#a430f994;text-shadow: 0 0 11px #882424"
+                        title="真相??">
+                        <span>逻</span><span>辑</span><span>的</span><span>旋</span><span>律</span><span>牵</span><span>动</span><span>现</span><span>象</span><span>，</span><span>永</span><span>远</span><span>演</span><span>奏</span><span>着</span><span>事</span><span>实</span><span>。</span>
+                    </span>
+                </div>
+
+                <div>
+                    <link rel="stylesheet" type="text/css" href="{{ site.assets_dir }}/css/resos/txt.wav.css" />
+                </div>
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#header-navbar" aria-expanded="false"> <span class="sr-only"></span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <h1 class="logo hvr-bounce-in">
+                        <a href="javascript:;" title="一生所愛博客">
+                            <span style="position: relative;">
+                                <div style="width:190px;height:42px;top:4px;position:relative">
+                                    <span
+                                        style="float:left;width:21%;height:100%;font-size: 42px;color:#ff5e0040;text-shadow: -10px 0 10px grey;">ξ</span>
+                                    <span style="float:right;width:79%;height:100%;">
+                                        <span
+                                            style="font-size:26px;
+                                                   font-family: cursive;
+                                                   float:left;color:#af2626;
+                                                   text-shadow: -10px 0 10px #8080808c;
+                                                   padding-bottom:4px">
+                                            ➳生所愛
+                                        </span>
+                                        <span class="txtwav slow"
+                                            style="font-size: 14px;float: left;margin-top: 7px; color:#37c0c8">
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span style="color:#e8da2a;text-shadow: -1px 0 10px rgb(187, 131, 9);font-size:10px;">🐩</span>
+                                            <!-- <span style="color:#e8da2a;text-shadow: -1px 0 10px rgb(187, 131, 9);">🍂</span> -->
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                            <span>.</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <!--  <form class="navbar-form visible-xs" action="/Search" method="post">
+              <div class="input-group">
+                <input type="text" name="keyword" class="form-control" placeholder="请输入关键字" maxlength="20" autocomplete="off">
+                <span class="input-group-btn">
+                <button class="btn btn-default btn-search" name="search" type="submit">搜索</button>
+                </span> </div>
+            </form> -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-cont="一生所愛博客" title="一生所愛博客" href="/index">Ψ 首　页</a></li>
+                        <li><a data-cont="文章归类" title="⌘ 文章归类" href="/list">⌘ 文章归类</a></li>
+                        <li><a data-cont="成长历程" title="♐ 成长历程" href="/me">♐ 成长历程</a></li>
+                        <li><a data-cont="资料库" title="ℒ 资料库" href="/databank">ℒ 资料库</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="dvMain">
+        {{ content }}
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                Copyright &copy; 2019. bakerstreet.club All rights
+                <a href="http://bakerstreet.club/" target="_blank" title="贝克街俱乐部">贝克街俱乐部</a>
+            </p>
+        </div>
+        <div id="gotop"><a class="gotop"></a></div>
+
+
+        <div id="dvScripts" style="display: none">
+            <script src="{{ site.assets_dir }}/mix/bootstrap/bootstrap.min.js"></script>
+            <script src="{{ site.assets_dir }}/js/base.extends/jquery.ias.js"></script>
+            <script src="{{ site.assets_dir }}/js/biz/scripts.js"></script>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

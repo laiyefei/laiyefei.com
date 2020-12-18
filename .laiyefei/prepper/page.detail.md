@@ -1,0 +1,114 @@
+---
+layout: default
+title: 文章列表
+permalink: /list
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/css/biz/detail.buff.css">
+
+<script type="text/javascript">
+	var bodys = document.getElementsByTagName("body");
+	if(0 < bodys.length){
+		bodys[0].setAttribute("class", "user-select single");
+	}
+</script> 
+<!-- <script src="/assets/mix/ztree/V3.5/js/jquery.ztree.core-3.5.min.js"></script>
+<script src="/assets/js/aid/ztree_toc.js"></script> -->
+<div>
+
+<section class="container">
+<div class="content-wrap">
+<div class="content">
+  <header class="article-header">
+	<h1 class="article-title"><a href="javascript:;" title="{{ page.title }}" > {{ page.title }} </a></h1>
+	<div class="article-meta"> 
+	  <span class="item article-meta-time">
+	  	<time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间：2016-10-14"><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%Y-%m-%d" }} </time>
+	  </span> 
+	  <span class="item article-meta-source" id="dvDetailToLeaffly" data-toggle="tooltip" data-placement="bottom" title="一叶飘流博客" data-original-title="来源：一叶飘流博客" >
+	  	<i class="glyphicon glyphicon-globe"></i> 一叶飘流博客
+	  </span> 
+	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="{{ page.categories.first }}" data-original-title="{{ page.categories.first }}">
+	  	<i class="glyphicon glyphicon-list"></i> 
+	  	<a href="javascript:;" title="{{ page.categories.first }}" >
+	  		{{ page.categories.first }}
+	  	</a>
+	  </span> 
+	  <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论量" data-original-title="评论量">
+	  	<i class="glyphicon glyphicon-comment"></i> <span id="spanCommentCount">0</span>
+	  </span> 
+	  <span style="display:inline-block;">
+		<div class="article-tags">
+		标签：
+		    {% for tag in page.tags %}
+				<a href="/list#{{ tag }}" rel="tag" > {{ tag }} </a>                    	
+		    {% endfor %}
+	   </div>
+	  </span>
+	</div>
+
+  </header>
+  <article class="article-content csDetailPost"  > 
+
+	{{ content }}
+
+  </article>
+
+  {% include comment.html %}
+
+  <div class="relates">
+	<div style="padding:30px 0"></div>
+	<div class="title">
+	  <h3 style="text-shadow:0 1px 2px grey">相关推荐</h3>
+	</div>
+	<ul>
+	   {% assign postsAfterFilter = '-' | split: "-" %}
+                    {% for p in site.posts %}
+                        {%if p.url != page.url %}
+                            {% assign commonTagCount = 0 %}
+                            {% for tag in p.tags %}
+                                {% if page.tags contains tag %}
+                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% for cat in p.categories %}
+                                {% if page.categories contains cat %}
+                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if commonTagCount > 0 %}
+                                {% assign postsAfterFilter = postsAfterFilter | push: p %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if postsAfterFilter.size > 0 %}
+                        {% for p in postsAfterFilter limit: 15 %}
+                            <li>
+                                <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">{{ p.title }}</a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+	</ul>
+	<div style="padding:50px 0"></div> 
+  </div>
+</div>
+</div>
+
+<aside class="sidebar">
+	<div class="fixed">
+		<div class="widget widget_hot">
+			{% include toc.html %}
+		</div>  
+	</div>
+</aside>
+</section>
+	<script type="text/javascript">
+		$("#dvDetailToLeaffly").click(function(){
+			location.href = "/index"; 
+		}); 
+	</script>
+
+</div>
