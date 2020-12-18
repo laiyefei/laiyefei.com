@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Invoke this action against the newly checked out source code.
-      - uses: laiyefei/jekyll-builder-for-github-pages-action@gh-pages
+      - uses: laiyefei/jekyll-builder-for-github-pages-action@master
         with:
           # Provide this action with your repository's `GH_PAGES_TOKEN`
           # "Secret" variable. This should be the value of a personal
