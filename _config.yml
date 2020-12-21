@@ -24,7 +24,7 @@ includes_dir: ./.laiyefei/performer
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ➳生所愛
+title: 量子❃糾纏
 email: laiyefei@feels.tech
 description: >- # this means to ignore newlines until "baseurl:"
   just go

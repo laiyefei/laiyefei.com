@@ -4,3 +4,20 @@
 .widget-sentence-link div{
 	padding:10px 0 0 10px;
 }
+
+
+.buff_rotate{
+    -webkit-animation:myRotate 1s linear infinite;
+    animation:myRotate 1s linear infinite;
+    text-shadow: none;
+}
+@-webkit-keyframes myRotate{
+    0%{ -webkit-transform: rotate(0deg);}
+    50%{ -webkit-transform: rotate(180deg);}
+    100%{ -webkit-transform: rotate(360deg);}
+}
+@keyframes myRotate{
+    0%{ -webkit-transform: rotate(0deg);}
+    50%{ -webkit-transform: rotate(180deg);}
+    100%{ -webkit-transform: rotate(360deg);}
+}
