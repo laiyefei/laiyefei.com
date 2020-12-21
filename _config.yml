@@ -35,7 +35,7 @@ github_username: laiyefei
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -64,16 +64,8 @@ markdown: kramdown
 kramdown:
   input:  GFM
   syntax_highlighter: rouge
-pagination:
-  enabled: true
-  debug: false
-  per_page: 7
-  permalink: '/page/:num/'
-  title: ":title - page :num of :max"
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true 
-  collection: 'posts'
+paginate: 10
+paginate_path: pagination/page:num/
 
 defaults:
   -
