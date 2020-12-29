@@ -10,7 +10,7 @@ layout: default
 	<div class="content-wrap">
 		<div class="content csSecContent" >
 		  <div class="title csTitleContent" style=" border-bottom: 1px solid black;padding:10px;box-shadow: 0 1px 2px grey">
-			<h3 style="line-height: 1.3;font-weight: bold;">♐　成长历程</h3>
+			<h3 style="line-height: 1.3;font-weight: bold;">☈　成长历程</h3>
 		  </div>
 		<section id="cd-timeline" class="cd-container">
 			{% for post in site.posts  %}

@@ -1,4 +1,4 @@
-<h3  style="text-shadow: 0 0 3px green" >▓ 标签墙 </h3>
+<h3  style="text-shadow: 0 0 3px {{ include.titleColor }}" >{{ include.title }}</h3>
 <div class="widget-sentence-content">  
    <ul class="plinks ptags" id="ulTagWall">           
         {% for tag in site.tags %}

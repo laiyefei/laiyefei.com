@@ -58,7 +58,7 @@ layout: default
         <aside class="sidebar">
             <div class="fixed">
                 <div class="widget widget_hot">
-                    <div>{% include tag.wall.md %}</div>
+                    <div>{% include tag.wall.md titleColor="green" title="▓ 标签墙 " %}</div>
                 </div>
             </div>
         </aside>

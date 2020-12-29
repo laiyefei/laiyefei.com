@@ -66,7 +66,6 @@ kramdown:
   syntax_highlighter: rouge
 paginate: 10
 paginate_path: pagination/page:num/
-
 defaults:
   -
     scope:
@@ -76,4 +75,6 @@ defaults:
       layout: post
       styles : [highlight.css,post.css]
       scripts : [post.js]
+
+imgrepo-body: "/assets/img/biz/body"
 #endregion
