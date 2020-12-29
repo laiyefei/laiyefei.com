@@ -19,23 +19,23 @@ permalink: /index
                     </ol>
                     <div class="carousel-inner" role="listbox" title="心之所向">
                         <div class="item active">
-                            <a href="javascript:;" target="_blank" title="诗与远方">
+                            <a href="javascript:;"  title="诗与远方">
                                 <img src="/assets/img/system/home/see.jpg" alt="诗与远方" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="海角天涯">
+                            <a href="javascript:;"  title="海角天涯">
                                 <img src="/assets/img/system/home/love.jpg" alt="海角天涯" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="天空之城">
+                            <a href="javascript:;"  title="天空之城">
                                 <img src="/assets/img/system/home/sky.jpg" alt="天空之城" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="量子纠缠">
+                            <a href="javascript:;"  title="量子纠缠">
                                 <img src="/assets/img/system/home/lzjc.jpg" alt="量子纠缠" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="听风">
+                            <a href="javascript:;"  title="听风">
                                 <img src="/assets/img/system/home/listening.jpg" alt="听风" class="img-responsive"></a>
                         </div>
                     </div>
