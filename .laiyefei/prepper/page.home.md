@@ -4,7 +4,6 @@ title: 首页
 permalink: /index
 ---
 
-<link rel="stylesheet" type="text/css" href="/assets/css/biz/index.buff.css" />
 
 <div>
     <section class="container">
@@ -18,26 +17,26 @@ permalink: /index
                         <li data-target="#focusslide" data-slide-to="3"></li>
                         <li data-target="#focusslide" data-slide-to="4"></li>
                     </ol>
-                    <div class="carousel-inner" role="listbox" title="难忘的记忆">
+                    <div class="carousel-inner" role="listbox" title="心之所向">
                         <div class="item active">
-                            <a href="javascript:;" target="_blank" title="遗憾">
-                                <img src="/assets/img/system/home/miss.png" alt="遗憾" class="img-responsive"></a>
+                            <a href="javascript:;" target="_blank" title="诗与远方">
+                                <img src="/assets/img/system/home/see.jpg" alt="诗与远方" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="海角">
-                                <img src="/assets/img/system/home/sea.png" alt="海角" class="img-responsive"></a>
+                            <a href="javascript:;" target="_blank" title="海角天涯">
+                                <img src="/assets/img/system/home/love.jpg" alt="海角天涯" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="火山岛">
-                                <img src="/assets/img/system/home/sun.png" alt="火山岛" class="img-responsive"></a>
+                            <a href="javascript:;" target="_blank" title="天空之城">
+                                <img src="/assets/img/system/home/sky.jpg" alt="天空之城" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="秋水">
-                                <img src="/assets/img/system/home/water.png" alt="秋水" class="img-responsive"></a>
+                            <a href="javascript:;" target="_blank" title="量子纠缠">
+                                <img src="/assets/img/system/home/lzjc.jpg" alt="量子纠缠" class="img-responsive"></a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" target="_blank" title="南昌之星">
-                                <img src="/assets/img/system/home/city.png" alt="南昌之星" class="img-responsive"></a>
+                            <a href="javascript:;" target="_blank" title="听风">
+                                <img src="/assets/img/system/home/listening.jpg" alt="听风" class="img-responsive"></a>
                         </div>
                     </div>
                     <a class="left carousel-control" href="#focusslide" role="button" data-slide="prev" rel="nofollow">
