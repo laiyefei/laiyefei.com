@@ -25,8 +25,8 @@ permalink: /list
 	  <span class="item article-meta-time">
 	  	<time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间：2016-10-14"><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%Y-%m-%d" }} </time>
 	  </span> 
-	  <span class="item article-meta-source" id="dvDetailToLeaffly" data-toggle="tooltip" data-placement="bottom" title="一叶飘流博客" data-original-title="来源：一叶飘流博客" >
-	  	<i class="glyphicon glyphicon-globe"></i> 一叶飘流博客
+	  <span class="item article-meta-source" id="dvDetailToLeaffly" data-toggle="tooltip" data-placement="bottom" title="量子糾纏博客" data-original-title="来源：量子糾纏博客" >
+	  	<i class="glyphicon glyphicon-globe"></i> 量子糾纏博客
 	  </span> 
 	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="{{ page.categories.first }}" data-original-title="{{ page.categories.first }}">
 	  	<i class="glyphicon glyphicon-list"></i> 
@@ -52,6 +52,11 @@ permalink: /list
 
 	{{ content }}
 
+
+	<div style="padding:100px 0 20px 0;border-bottom:1px solid #ccc;margin-bottom:4px">
+	<div style="color:#ccc">END</div>
+	</div>
+	<span style="color:red;font-size:10px;font-weight:bold">**（以上，仅代表个人观点。无论对错，欢迎交流。^_^ ）**</span>
   </article>
 
   {% include comment.html %}

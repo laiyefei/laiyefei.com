@@ -1,0 +1,1 @@
+![{{ include.name }}]({{ include.path | prepend: site.imgrepo-title }})

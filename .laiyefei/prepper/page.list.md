@@ -22,10 +22,10 @@ layout: default
                         {% for posts in tag %}
                         {% for post in posts %}
                         {% if post.title != null %}
-                        <article class="excerpt excerpt-1"><a class="focus" href="#" title="test title"
+                        <article class="excerpt excerpt-1"><a class="focus" href="#" title="empty title"
                                 target="_self"><img class="thumb"
                                     data-original="/assets/img/biz/title/{{ post.date | date: "%Y-%m-%d" }}.jpg"
-                                    src="/assets/img/biz/title/{{ post.date | date: "%Y-%m-%d" }}.jpg" alt="test alt"
+                                    src="/assets/img/biz/title/{{ post.date | date: "%Y-%m-%d" }}.jpg" alt="empty"
                                     style="display: inline;"></a>
                             <header><a class="cat" href="javascript:;" title="{{ post.categories }}">{{ post.categories
                                     }}<i></i></a>
@@ -35,9 +35,9 @@ layout: default
                             <p class="meta">
                                 <time class="time"><i class="glyphicon glyphicon-time"></i> {{ post.date | date:
                                     "%Y-%m-%d" }}</time>
-                                <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 217</span> <a
+                                <!-- <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 217</span> <a
                                     class="comment" href="##comment" title="评论" target="_self"><i
-                                        class="glyphicon glyphicon-comment"></i> 4</a>
+                                        class="glyphicon glyphicon-comment"></i> 4</a> -->
                             </p>
                             <p class="note">
                                 {{post.note}}
@@ -58,7 +58,7 @@ layout: default
         <aside class="sidebar">
             <div class="fixed">
                 <div class="widget widget_hot">
-                    <div>{% include tag.wall.md titleColor="green" title="▓ 标签墙 " %}</div>
+                    <div>{% include tag.wall.md titleColor="green" title="▓ 标签墙 " groups=site.tags %}</div>
                 </div>
             </div>
         </aside>

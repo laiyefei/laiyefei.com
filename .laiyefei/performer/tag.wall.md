@@ -1,9 +1,9 @@
 <h3  style="text-shadow: 0 0 3px {{ include.titleColor }}" >{{ include.title }}</h3>
 <div class="widget-sentence-content">  
    <ul class="plinks ptags" id="ulTagWall">           
-        {% for tag in site.tags %}
+        {% for group in include.groups %}
         <li style="width:108px">
-            <a href="#{{ tag | first }}" times="1" onclick="javascript:tagDoAutoHide('{{ tag | first }}', this);" title="{{ tag | first }}" >
+            <a href="#{{ group | first }}" times="1" onclick="javascript:tagDoAutoHide('{{ group | first }}', this);" title="{{ group | first }}" >
         <div style="position:relative;">
             <span style="
             background-color:#eee;
@@ -17,9 +17,9 @@
             text-align: right;
             font-size: 12px;
             " >
-            {{ tag | first }}
+            {{ group | first }}
             </span>
-            <span style="float:right;width:10px;background-color:#eee;color:#c166b1;padding-left:2px;font-weight: bold;font-size:20px;"><sup>{{ tag | last | size }}</sup></span>
+            <span style="float:right;width:10px;background-color:#eee;color:#c166b1;padding-left:2px;font-weight: bold;font-size:20px;"><sup>{{ group | last | size }}</sup></span>
         </div>
         </a></li>
         {% endfor %} 

@@ -76,5 +76,7 @@ defaults:
       styles : [highlight.css,post.css]
       scripts : [post.js]
 
+warehouse: "/assets/warehouse"
+
 imgrepo-body: "/assets/img/biz/body"
 #endregion
