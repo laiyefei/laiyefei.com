@@ -46,10 +46,10 @@ permalink: /list
 	   </div>
 	  </span>
 	</div>
-
   </header>
   <article class="article-content csDetailPost"  > 
-
+	
+	
 	{{ content }}
 
 

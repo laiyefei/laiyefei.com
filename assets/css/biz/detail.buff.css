@@ -51,3 +51,22 @@ blockquote p{
 	font-family: cursive;
 	padding:0 0 10px;
 }
+
+
+/* 表格样式 */
+.csDetailPost table{
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+.csDetailPost table th,td{
+    padding:10px;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.csDetailPost table th{
+    padding:20px;
+    font-weight: bold;
+}
+.csDetailPost table td{
+    padding:14px;
+}
