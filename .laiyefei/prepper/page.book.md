@@ -9,7 +9,7 @@ layout: default
 		<h3 style="line-height: 1.3">ஐ 图书馆</h3>
 	  </div>
 	  <div>
-	  	<iframe id="iframeBody" name="iframeBody" src="/assets/warehouse/book/foroffer.pdf" style="width:100%;height: 100%;border:none;box-shadow: 0 0 10px grey">
+	  	<iframe id="iframeBody" name="iframeBody" src="/views/mix/pdfjs/web/viewer.html?file={{ '/books/quantum1.pdf' | prepend: site.warehouse }}" style="width:100%;height: 100%;border:none;box-shadow: 0 0 10px grey">
 	  	</iframe>
 	  </div>   
 	  <nav class="pagination" style="display: none;">
