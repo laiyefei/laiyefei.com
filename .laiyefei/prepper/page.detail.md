@@ -34,9 +34,9 @@ permalink: /list
 	  		{{ page.categories.first }}
 	  	</a>
 	  </span> 
-	  <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论量" data-original-title="评论量">
+	  <!-- <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论量" data-original-title="评论量">
 	  	<i class="glyphicon glyphicon-comment"></i> <span id="spanCommentCount">0</span>
-	  </span> 
+	  </span>  -->
 	  <span style="display:inline-block;">
 		<div class="article-tags">
 		标签：
