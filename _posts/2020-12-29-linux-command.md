@@ -20,3 +20,5 @@ note: 记录linux指令
 |创建用户|useradd laiyefei|
 |设置密码|passwd laiyefei|
 |编辑超管文件|vi /etc/sudoers|
+|给文件夹授权|chown -R 用户:用户 /【文件夹】 |
+|查看用户分组信息|groups|
