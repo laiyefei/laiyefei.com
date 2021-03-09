@@ -25,4 +25,8 @@ note: 记录git的常见问题
     git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
     git reflog expire --expire=now --all
     git gc --prune=now
+4. 权限不够
+    git update-index --chmod=+x [文件名]
+5. 文件大小限制
+    git config http.postBuffer 524288000 （52428000=500×1024×1024,即500M）
 ~~~
