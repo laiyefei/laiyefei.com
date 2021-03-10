@@ -17,3 +17,12 @@ note: 记录遇到的一些nginx问题
 1. docker pull nginx:latest
 2. docker run --name nginx -p 80:80 -d nginx
 ~~~
+
+# nginx 配置
+
+~~~
+1. 转发请求
+location /路由 {
+    proxy_pass http://localhost:端口/上下文
+}
+~~~
