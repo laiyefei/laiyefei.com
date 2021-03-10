@@ -23,6 +23,15 @@ note: 记录遇到的一些nginx问题
 ~~~
 1. 转发请求
 location /路由 {
-    proxy_pass http://localhost:端口/上下文
+    proxy_pass 【目标地址】;
+}
+2. 转发二级域名
+if ($http_host ~* "^(.*?)【域名】$") {
+    set $domain $1;
+}
+location / {
+    if ($domain ~* "【关键字】") {
+        proxy_pass 【目标地址】;
+    }
 }
 ~~~
