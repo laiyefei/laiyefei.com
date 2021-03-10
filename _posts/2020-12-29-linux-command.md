@@ -22,3 +22,4 @@ note: 记录linux指令
 |编辑超管文件|vi /etc/sudoers|
 |给文件夹授权|chown -R 用户:用户 /【文件夹】 |
 |查看用户分组信息|groups|
+|找到进程并关闭|ps -ef \| grep cloud-desktop-v1.0.0-SNAPSHOT.jar \| awk '{print $2}' \| xargs kill -9|
