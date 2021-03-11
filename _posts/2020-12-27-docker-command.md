@@ -18,3 +18,4 @@ note: 记录docker命令
 |进入docker容器|docker exec -it [code] /bin/bash|
 |构建docker|docker build -t [tag]:v .|
 |保存docker镜像|docker save -o [tag].tar [tag]|
+|启动所有容器|docker start $(docker ps -a \| awk '{ print $1}' \| tail -n +2)|

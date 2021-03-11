@@ -23,3 +23,13 @@ note: 记录linux指令
 |给文件夹授权|chown -R 用户:用户 /【文件夹】 |
 |查看用户分组信息|groups|
 |找到进程并关闭|ps -ef \| grep 【进程名】 \| grep -v grep \| awk '{print $2}' \| xargs -r kill -9|
+|拷贝强行覆盖文件|\cp -rf  【源文件】 【目标文件夹】
+
+# 常见问题
+
+~~~
+1. 如何开机启动
+   脚本写入其中 /etc/rc.d/rc.local 
+   授权 chmod +x /etc/rc.d/rc.local
+2. 
+~~~
