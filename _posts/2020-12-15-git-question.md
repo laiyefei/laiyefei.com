@@ -29,4 +29,7 @@ note: 记录git的常见问题
     git update-index --chmod=+x [文件名]
 5. 文件大小限制
     git config http.postBuffer 524288000 （52428000=500×1024×1024,即500M）
+6. 上传大文件
+    git lfs install 
+    git lfs track
 ~~~
