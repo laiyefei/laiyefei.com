@@ -16,4 +16,8 @@ jobs:
       with:
         ruby-version: 2.7.2
     - name: run task
-      run: ruby issue-create.rb
+      run: |
+            gem install faraday
+            gem install activesupport
+            gem install sitemap-parser
+            ruby issue-create.rb
