@@ -1,4 +1,4 @@
-w---
+---
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -8,17 +8,9 @@ layout: null
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     {% for post in site.posts %}
     <url>
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
+        <url>{{ post.url | prepend: site.baseurl | prepend: site.url }}</url>
+        <title>{{ post.title }}</title>
+        <categories>{{ post.categories }}</categories>
     </url>
-    {% endfor %}
-    {% for post in site.pages %}{% if post.isNavItem %}
-    <url>
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-    </url>
-    {% endif %}
     {% endfor %}
 </urlset>
