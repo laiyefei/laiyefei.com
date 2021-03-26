@@ -11,6 +11,9 @@
       owner: 'ish9dcn',
       admin: ['ish9dcn'],
       id: '{{ page.title }}',
+      title:"{{ page.title }}",
+      labels:["{{ page.categories }}"],
+      body: decodeURI(location.href)
   };
   var gitalk = new Gitalk(talkObj);
   gitalk.render('dvGitalk');
