@@ -17,6 +17,8 @@ jobs:
         ruby-version: 2.7.2
     - name: run task
       run: |
-            sudo gem install faraday activesupport sitemap-parser
-            
+            sudo gem install faraday
+            sudo gem install activesupport
+            sudo gem install sitemap-parser
+
             ruby issue-create.rb
