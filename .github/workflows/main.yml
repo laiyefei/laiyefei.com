@@ -20,4 +20,5 @@ jobs:
             gem install faraday
             gem install activesupport
             gem install sitemap-parser
+            gem install require_relative
             ruby issue-create.rb
