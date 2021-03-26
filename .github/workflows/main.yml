@@ -15,10 +15,11 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.2
-    - name: run task
+    - name: run install depencencies
       run: |
-            gem install faraday -v 0.9.2
+            gem install faraday
             gem install activesupport
-            gem install sitemap-parser
-
+            gem install sitemap-parser 
+    - name: run command
+      run: |
             ruby issue-create.rb
