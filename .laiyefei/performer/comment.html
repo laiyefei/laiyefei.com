@@ -1,19 +1,16 @@
 <!-- region gitment about -->
 <div style="padding:50px 0"></div>
 <div id="dvGitalk"></div>
-<link rel="stylesheet" href="/assets/mix/gitalk/gitalk.v1.2.2.min.css">
-<script src="/assets/mix/gitalk/gitalk.v1.2.2.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 <script type="text/javascript">
   var talkObj = {
-      id:"{{ page.title }}",
-      title:"{{ page.title }}",
+      clientID: `f85f1f5df45297a15781`,
+      clientSecret: `3c69ba0d4da63359329bd52dfdd03f73373866c4`,
+      repo: `gitalk-issues`,
       owner: 'ish9dcn',
-      repo: 'gitalk-issues',
-      clientID: 'f85f1f5df45297a15781',
-      clientSecret: '3c69ba0d4da63359329bd52dfdd03f73373866c4',
-      labels:["{{ page.categories }}"],
       admin: ['ish9dcn'],
-      body: decodeURI(location.href)
+      id: '{{ page.title }}',
   };
   var gitalk = new Gitalk(talkObj);
   gitalk.render('dvGitalk');
