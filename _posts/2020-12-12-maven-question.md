@@ -43,4 +43,8 @@ note: 记录maven的常见问题
           <scope>system</scope>
           <systemPath>${project.basedir}/lib/【jar包名称】</systemPath>
         </dependency>
+3. maven 部署忽略SSL证书检查
+   JVM Option：
+        -Dmaven.wagon.http.ssl.insecure=true 
+        -Dmaven.wagon.http.ssl.allowall=true
 ~~~
