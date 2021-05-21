@@ -59,7 +59,7 @@ permalink: /list
 	<span style="color:red;font-size:10px;font-weight:bold">**（以上，仅代表个人观点。无论对错，欢迎交流。^_^ ）**</span>
   </article>
 
-  {% include comment.html %}
+  <!-- {% include comment.html %} -->
 
   <div class="relates">
 	<div style="padding:30px 0"></div>

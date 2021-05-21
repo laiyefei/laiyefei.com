@@ -4,7 +4,7 @@ title: 特殊符号记录
 tags: 笔记
 categories: 笔记
 date: 2021-05-19
-note: selenium 接口使用记录
+note: 特殊符号记录
 ---
 
 * TOC
