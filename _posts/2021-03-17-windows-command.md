@@ -17,3 +17,4 @@ note: 记录windows指令
 |win10|执行策略更改|set-ExecutionPolicy RemoteSigned|
 |win10|添加网络路由信息|route add 10.0.0.0 mask 255.0.0.0 网关 -p|
 |win10|删除路由信息|route delete 10.0.0.0|
+|win10|设置适配器启用或者禁用|netsh interface set interface "【适配器名称】" admin=disabled/enable|
