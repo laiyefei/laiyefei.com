@@ -12,16 +12,16 @@ note: npm 脚手架开发笔记记录
 
 # npm脚手架编写步骤
 
-1. npm init 初始化一个仓库，如 test
-2. 在 package.json 添加 bin 节点
-3. 创建js，如 cli.js，顶格写注释
+1.npm init 初始化一个仓库，如 test
+2.在 package.json 添加 bin 节点
+3.创建js，如 cli.js，顶格写注释
 
 ~~~
 #!/usr/bin/env node
 console.log('cli working!')
 ~~~
 
-4. 安装两个npm模块
+4.安装两个npm模块
 
 ~~~
 # 用于命令行交互
@@ -30,7 +30,7 @@ npm install inquirer
 npm install ejs
 ~~~
 
-5. 编写cli.js
+5.编写cli.js
 
 ~~~
 #!/usr/bin/env node
@@ -79,7 +79,7 @@ inquirer.prompt([
 })
 ~~~
 
-6. 创建模板文件 在 templates 文件夹中
+6.创建模板文件 在 templates 文件夹中
 
 ~~~
 index.html
