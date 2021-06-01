@@ -13,7 +13,9 @@ note: npm 脚手架开发笔记记录
 # npm脚手架编写步骤
 
 1.npm init 初始化一个仓库，如 test
+
 2.在 package.json 添加 bin 节点
+
 3.创建js，如 cli.js，顶格写注释
 
 ~~~
