@@ -16,14 +16,16 @@ note: npm 脚手架开发笔记记录
 
 2.在 package.json 添加 bin 节点
 
-3.创建js，如 cli.js，顶格写注释
+3.执行 npm link
+
+4.创建js，如 cli.js，顶格写注释
 
 ~~~
 #!/usr/bin/env node
 console.log('cli working!')
 ~~~
 
-4.安装两个npm模块
+5.安装两个npm模块
 
 ~~~
 # 用于命令行交互
@@ -32,7 +34,7 @@ npm install inquirer
 npm install ejs
 ~~~
 
-5.编写cli.js
+6.编写cli.js
 
 ~~~
 #!/usr/bin/env node
@@ -81,7 +83,7 @@ inquirer.prompt([
 })
 ~~~
 
-6.创建模板文件 在 templates 文件夹中
+7.创建模板文件 在 templates 文件夹中
 
 ~~~
 index.html
