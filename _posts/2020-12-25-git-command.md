@@ -24,6 +24,14 @@ note: 记录git命令
     git submodule add 【git地址】 【子模块路径】
 4. 拉取全部
     git clone --recursive 【git地址】
+5. 强制覆盖本地
+    git fetch --all
+    git reset --hard 【分支】
+6. git子模块更新
+    git submodule update --init --recursive
+7. 拉取所有子模块
+    git submodule foreach git reset --hard 【分支】
+    git pull --recurse-submodules    
 ~~~
 
 ## GIT 以镜像方式推送
