@@ -18,3 +18,6 @@ note: 记录windows指令
 |win10|添加网络路由信息|route add 10.0.0.0 mask 255.0.0.0 网关 -p|
 |win10|删除路由信息|route delete 10.0.0.0|
 |win10|设置适配器启用或者禁用|netsh interface set interface "【适配器名称】" admin=disabled/enable|
+|刷新DNS|ipconfig /flushdns|
+|后台运行批处理|if "%1"=="hide" <br/> goto CmdBegin <br/> start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit <br/>:CmdBegin|
+|启动虚拟机平台功能|Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform|

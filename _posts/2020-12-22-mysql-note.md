@@ -22,4 +22,7 @@ note: 记录遇到的一些mysql问题
 2. docker 安装
     1.1. docker pull mysql:latest
     1.2. docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=[password] mysql 
+
+3. 无须密码登录
+    my.ini 配置 skip-grant-tables 跳过安全校验
 ~~~
