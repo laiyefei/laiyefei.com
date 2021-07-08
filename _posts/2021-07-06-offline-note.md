@@ -3,7 +3,7 @@ layout: page.detail
 title: 离线安装 之 离线笔记
 tags: 笔记 offline
 categories: 笔记
-date: 2021-07-07
+date: 2021-07-06
 note: 离线安装 之 离线笔记记录
 ---
 
