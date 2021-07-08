@@ -20,4 +20,5 @@ note: 记录windows指令
 |win10|设置适配器启用或者禁用|netsh interface set interface "【适配器名称】" admin=disabled/enable|
 |刷新DNS|ipconfig /flushdns|
 |后台运行批处理|if "%1"=="hide" <br/> goto CmdBegin <br/> start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit <br/>:CmdBegin|
-|启动虚拟机平台功能|Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform|
+|启动虚拟平台|Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform|
+|禁用虚拟平台|Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform|

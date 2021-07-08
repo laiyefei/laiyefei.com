@@ -29,6 +29,8 @@ note: 记录linux指令
 |找到进程并关闭|ps -ef \| grep 【进程名】 \| grep -v grep \| awk '{print $2}' \| xargs -r kill -9|
 |拷贝强行覆盖文件|\cp -rf  【源文件】 【目标文件夹】|
 |创建软连接|ln -s 【源文件】 【目标文件】|
+|列出所有服务列表|systemctl list-unit-files|
+|列出可用服务列表|systemctl list-units|
 
 
 # 常见问题
