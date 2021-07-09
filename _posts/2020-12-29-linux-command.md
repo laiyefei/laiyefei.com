@@ -31,6 +31,7 @@ note: 记录linux指令
 |创建软连接|ln -s 【源文件】 【目标文件】|
 |列出所有服务列表|systemctl list-unit-files|
 |列出可用服务列表|systemctl list-units|
+|
 
 
 # 常见问题

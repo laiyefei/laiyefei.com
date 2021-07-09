@@ -25,4 +25,10 @@ note: 记录遇到的一些mysql问题
 
 3. 无须密码登录
     my.ini 配置 skip-grant-tables 跳过安全校验
+
+4. 创建用户
+    CREATE USER  'username'@'%'  IDENTIFIED BY 'password';
+
+5. 授权
+    grant all privileges on *.* to 'username'@'%';
 ~~~
