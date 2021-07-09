@@ -11,9 +11,6 @@ note: 离线安装 之 docker 安装
 {:toc}
 
 
-* TOC
-{:toc}
-
 # 准备资源
 
 {% include download.link.md name='docker' path='/docker.7z' %}
