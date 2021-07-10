@@ -49,8 +49,15 @@ note: 记录docker命令
 # 安装软件复杂指令备忘录
 
 ~~~
-1. yearning
+1. YEARNING
     docker run -d -it -p8000:8000 -e MYSQL_USER=root -e MYSQL_ADDR=yearning.laiyefei.com:3306 -e MYSQL_PASSWORD=123123 -e MYSQL_DB=Yearning
     
-2. 
+2. CAS
+   2.1. docker pull apereo/cas
+   2.2. docker run  --name cas -p 8443:8443 -p 9990:8080  apereo/cas /bin/sh /cas-overlay/bin/run-cas.sh
+   2.3. keytool -genkey -alias laiyefei -keypass laiyefei -keyalg RSA -keystore server.keystore
+        ps. 默认密码changeit: keytool -genkey -alias tomcat -keypass changeit -keyalg RSA -keystore server.keystore
+   2.4. docker cp server.keystore cas:/etc/cas/thekeystore
+   2.5. docker start cas
+   2.6. 访问 https://localhost:8443/cas/login
 ~~~
