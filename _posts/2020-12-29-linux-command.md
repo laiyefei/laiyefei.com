@@ -31,7 +31,9 @@ note: 记录linux指令
 |创建软连接|ln -s 【源文件】 【目标文件】|
 |列出所有服务列表|systemctl list-unit-files|
 |列出可用服务列表|systemctl list-units|
-|查CPU核心数|cat /proc/cpuinfo\| grep "physical id"\| sort\| uniq\| wc -l
+|查CPU核心数|cat /proc/cpuinfo\| grep "physical id"\| sort\| uniq\| wc -l|
+|关机|halt|
+|
 
 
 # 常见问题
