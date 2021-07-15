@@ -25,6 +25,23 @@ note: 记录docker命令
 |删除某个tag|docker rmi 【镜像名】|
 
 
+# 常见操作
+
+~~~
+1. 批量打标签
+
+images=$1
+ 
+for img in $(docker images --format "{{.Repository}}:{{.Tag}}"| grep "【keyword】"); do
+  n=$(echo ${img}| awk -F'[/.:]' '{printf "gcr.io/%s",$2}')
+  image=$(echo ${img}| awk -F'[/.:]' '{printf "/%s",$3}')
+  tag=$(echo ${img}| awk -F'[:]' '{printf ":%s",$2}')
+  docker tag $img "${n}${image}${tag}"
+  [[ ${n} == "gcr.io/google-containers" ]] && docker tag $img "k8s.gcr.io${image}${tag}"
+done
+
+~~~
+
 # 常见问题
 
 ~~~
