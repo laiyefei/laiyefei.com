@@ -23,6 +23,12 @@ note: 记录docker命令
 |将镜像存为本地文件|docker save -o 【镜像文件名.docker】 【id】|
 |加载镜像文件|docker load -i 【镜像文件】|
 |删除某个tag|docker rmi 【镜像名】|
+|列出所有容器|docker ps -aq|
+|停止所有容器|docker stop $(docker ps -aq)|
+|删除所有容器|docker rm $(docker ps -aq)|
+|删除所有镜像|docker rmi $(docker images -q)|
+|删除所有停止的容器|docker container prune -f|
+|
 
 
 # 常见操作
@@ -58,7 +64,9 @@ done
 3. 从本地仓拉镜像
     3.1. vim /usr/lib/systemd/system/docker.service 
     3.2. --add-registry=127.0.0.1:9998  --insecure-registry=127.0.0.1:9998 \  【加在ExecStart=第一行】
-
+4. 升级报错  docker-runc => runc
+    进入容器 /var/lib/docker/containers/【container_id】
+    vim hostconfig.json
 ~~~
 
 
@@ -77,4 +85,9 @@ done
    2.4. docker cp server.keystore cas:/etc/cas/thekeystore
    2.5. docker start cas
    2.6. 访问 https://localhost:8443/cas/login
+
+3. nexus
+   docker run -d -p 9999:8081 --name nexus sonatype/nexus3
+     docker exec -it 【容器id】 bash 【进入容器】
+     cat /opt/sonatype/sonatype-work/nexus/admin.password
 ~~~
